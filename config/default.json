@@ -1,6 +1,6 @@
 {
-  "mongoURI": "mongodb+srv://anshul12345:anshul12345@devconnector.i6qac.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+  "mongoURI": "",
   "jwtSecret":"secretcode",
-  "githubClientId":"8ab1edb33ccfd2d6c19f",
-  "githubSecret":" ef724f00dc3a9c7b9af4cfc0ad4b4312cc219df4"
+  "githubClientId":"",
+  "githubSecret":""
 }
