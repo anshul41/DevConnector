@@ -1,0 +1,21 @@
+Nodeconst { default: axios } = require('axios')
+const express = require('express')
+const { default: parse } = require('node-html-parser')
+const app = express()
+const port = 3000
+
+
+
+app.get('/', (req, res) => res.send('Hello World!'))
+
+
+axios.get('https://play.google.com/store/apps/collection/topselling_free').then(({data}) => {
+    const root = parse(data);
+    const body = root.querySelector('body')
+    const apps = Array.from(body.querySelectorAll(".b8cIId.ReQCgd.Q9MA7b")).map(app => app.firstChild._attrs['href']).length
+    console.log(apps)
+})
+
+
+
+app.listen(port, () => console.log(`Example app listening on port port!`))
